@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>List of Users</h1>
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Email</th>
+                <th scope="col">Action1</th>
+                <th scope="col">Action2</th>
+              </tr>
+            </thead>
+            <tbody>
+                <!-- rdusr -->
+              <tr *ngFor = "let usr of users "> 
+                <td scope="col">{{usr.id}}</td>
+                <td scope="col">{{usr.firstname}}</td>
+                <td scope="col">{{usr.lastname}}</td>
+                <td scope="col">{{usr.age}}</td>
+                <td scope="col">{{usr.gender}}</td>
+                <td scope="col">{{usr.email}}</td>
+                <td scope="col"><button class="btn btn-sm btn-success" [routerLink]="['/create', usr.id]">Edit</button></td>
+                <td scope="col"><button class="btn btn-sm btn-danger" (click)="deleteUser(usr.id)">Delete</button></td>
+              </tr>
+              
+            </tbody>
+          </table>
+    </div>
+
+</div>
+

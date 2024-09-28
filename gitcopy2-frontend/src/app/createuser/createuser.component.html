@@ -1,0 +1,33 @@
+<p>createuser works!</p>
+
+<div class="container">
+    <div class="row">
+        
+        <form [formGroup]="userForm" >
+            <div class="col-md-4 mt-2 mb-2">
+                <input type="text" class="form-control" formControlName="firstname" placeholder="First Name">
+            </div>
+            <div class="col-md-4 mt-2 mb-2">
+                <input type="text" class="form-control" formControlName="lastname" placeholder="Last Name">
+            </div>
+            <div class="col-md-4 mt-2 mb-2">
+                <input type="text" class="form-control" formControlName="age" placeholder="Age">
+            </div>
+            <div class="col-md-4 mt-2 mb-2">
+                <input type="text" class="form-control" formControlName="gender" placeholder="Gender">
+            </div>
+            <div class="col-md-4 mb-2">
+                <input type="text" class="form-control" formControlName="email" placeholder="Email ID">
+            </div>
+            <div class="col-md-4 mb-2">
+                <input type="text" class="form-control" formControlName="phone" placeholder="Phone Number">
+            </div>
+            <div class="col-md-4 mb-2">
+                <button class="btn btn-primary" *ngIf="!getId" (click)="createNew()">Add User</button>
+            </div>
+            <div class="col-md-4 mb-2">
+                <button class="btn btn-success" *ngIf="getId" (click)="update()">Update User</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<p>login works!</p>
+
+
+
+<div class="container">
+    <div class="row">
+        
+        <form >
+            <div class="col-md-4 mt-2 mb-2">
+                <input type="text" class="form-control"  placeholder="Email">
+            </div>
+            <div class="col-md-4 mt-2 mb-2">
+                <input type="text" class="form-control"  placeholder="Password">
+            </div>
+            
+            <div class="col-md-4 mb-2">
+                <button class="btn btn-sm btn-primary"  (click)="login()">Login</button>
+            </div>
+           
+        </form>
+    </div>
+</div>
+
+<div *ngIf=token>
+ <strong>{{token}}</strong>
+</div>
+
